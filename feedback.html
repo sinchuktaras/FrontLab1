@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Зворотній зв’язок — Зелена полиця</title>
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="D:\FrontEnd Labs\lab1\images\green-shelf-high-resolution-logo-transparent.png" alt="Логотип" width="120" height="80" />
+      Зелена полиця — Зворотній зв’язок
+    </h1>
+    <nav>
+      <a href="index.html"><button type="button">Головна</button></a>
+      <a href="catalog.html"><button type="button">Каталог</button></a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Форма зворотнього зв’язку</h2>
+
+      <!-- Форма-->
+      <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+        <!-- Поля 1-4 згруповані у fieldset з легендою -->
+        <fieldset>
+          <legend>Персональна інформація</legend>
+
+          <p>
+            <label for="fullname">Прізвище та ім'я:</label><br />
+            <input type="text" id="fullname" name="fullname" required />
+          </p>
+
+          <p>
+            <label for="email">E-mail:</label><br />
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="age">Вік:</label><br />
+            <input type="number" id="age" name="age" min="0" max="120" required />
+          </p>
+
+          <p>Освіта:<br />
+            <!-- Вибрати одну з переліку -->
+            <label><input type="radio" name="education" value="повна" required /> повна</label><br />
+            <label><input type="radio" name="education" value="неповна" /> неповна</label><br />
+            <label><input type="radio" name="education" value="вища" /> вища</label><br />
+            <label><input type="radio" name="education" value="професійна" /> професійна</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <label for="purpose">Мета зворотнього зв’язку:</label><br />
+          <select id="purpose" name="purpose" required>
+            <option value="">-- оберіть --</option>
+            <option value="співпраця">Співпраця</option>
+            <option value="скарга">Скарга на порушення права власності</option>
+            <option value="пропозиція">Пропозиція</option>
+            <option value="помилка">Наявність помилки</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="details">Детально:</label><br />
+          <!-- textarea: cols/rows задають ширину/висоту; maxlength обмежує кількість символів -->
+          <textarea id="details" name="details" cols="60" rows="8" maxlength="1000" placeholder="Опишіть детально..." required></textarea>
+        </p>
+
+        <p>
+          <label><input type="checkbox" name="consent" required /> Я даю згоду на обробку моїх персональних даних</label>
+        </p>
+
+        <p>
+          <button type="submit">Відправити</button>
+          <button type="reset">Очистити</button>
+        </p>
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <p>© Зелена полиця — Зворотній зв'язок</p>
+  </footer>
+</body>
+</html>
+
